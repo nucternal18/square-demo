@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { CreditCardInput, SquarePaymentsForm } from 'react-square-web-payments-sdk'
-import styles from '../styles/Home.module.css'
+import { TokenResult} from '@square/web-sdk'
+import styles from '../styles/Home.module.css';
 
 // card number: 4111 1111 1111 1111
 // expiration date: any future date
@@ -21,7 +22,7 @@ const Home: NextPage = () => {
         <SquarePaymentsForm
         applicationId='sandbox-sq0idb-cxN-liE0_QARd6Yqi5lSOg'
         locationId='LPM3K07P4B4VW'
-        cardTokenizeResponseReceived={async (token, buyer) => {
+        cardTokenizeResponseReceived={async (token: TokenResult, buyer) => {
           const response = await fetch('/api/pay', {
             method: 'POST',
             headers: {
