@@ -20,8 +20,8 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <SquarePaymentsForm
-        applicationId='sandbox-sq0idb-cxN-liE0_QARd6Yqi5lSOg'
-        locationId='LPM3K07P4B4VW'
+        applicationId='SANDBOX_APPLICATION_ID'
+        locationId='SANDBOX_LOCATION_ID'
         cardTokenizeResponseReceived={async (token: TokenResult, buyer) => {
           const response = await fetch('/api/pay', {
             method: 'POST',
