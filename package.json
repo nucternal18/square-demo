@@ -9,9 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@square/web-sdk": "^2.0.0-alpha.2",
     "next": "12.1.0",
+    "next-transpile-modules": "^9.0.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-square-web-payments-sdk": "^2.2.3",
+    "square": "^17.2.0"
   },
   "devDependencies": {
     "@types/node": "17.0.21",
